@@ -4,7 +4,7 @@ using MessengerApp.Persistence.Context;
 
 namespace MessengerApp.Persistence.Services;
 
-public class ICustomerDbService : DbService<Customer>, ICustomerDbServices
+public class ICustomerDbService : DbService<Customer>, ICustomerServices
 {
     public ICustomerDbService(ApplicationDbContext context) : base(context)
     {
