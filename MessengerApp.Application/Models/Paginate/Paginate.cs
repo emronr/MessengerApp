@@ -18,7 +18,7 @@ public class Paginate<T> : IPaginate<T>
     public Paginate(IQueryable<T> source, QueryParameter queryParameter)
     {
         if (queryParameter.From > queryParameter.Index)
-            throw new ArgumentException($"from: {queryParameter.From} > index: {queryParameter.Index}, must from <= index");
+            throw new ArgumentException($"From: {queryParameter.From} > Index: {queryParameter.Index}, must From <= Index");
         
         Index = queryParameter.Index;
         Size = queryParameter.Size;
