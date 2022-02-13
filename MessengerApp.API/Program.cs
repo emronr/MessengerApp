@@ -16,6 +16,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddPersistence();
+builder.WebHost.AddGraylog();
 
 var app = builder.Build();
 
