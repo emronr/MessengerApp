@@ -56,7 +56,7 @@ public class DbService<TEntity> : IDbServices<TEntity>
         return new BaseResponse<TEntity>(data);
     }
 
-    public async Task<BaseResponse<IPaginate<TEntity>>> GetAllAsync(QueryParameter<TEntity> queryParameter)
+    public async Task<BaseResponse<IPaginate<TEntity>>> GetAllAsync(QueryParameter queryParameter)
     {
         var datas = _DbSet.AsQueryable();
         if(datas == null)

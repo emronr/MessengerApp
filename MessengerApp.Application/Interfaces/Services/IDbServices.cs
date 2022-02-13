@@ -16,7 +16,6 @@ public interface IDbServices<T>
 
     Task<BaseResponse<T>> GetById(int id);
 
-    Task<BaseResponse<IPaginate<T>>> GetAllAsync(QueryParameter<T> queryParameter);
-
+    Task<BaseResponse<IPaginate<T>>> GetAllAsync(QueryParameter queryParameter);
 
 }
