@@ -1,3 +1,4 @@
+using MessengerApp.API.Extensions;
 using MessengerApp.Persistence;
 using MessengerApp.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options
 builder.Services.AddPersistence();
 
 var app = builder.Build();
+
+app.UseRequestResponseLogging();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
